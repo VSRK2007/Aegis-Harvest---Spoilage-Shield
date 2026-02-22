@@ -1,0 +1,114 @@
+═══════════════════════════════════════════════════════════════
+  HOW TO SEE THE AEGIS HARVEST APP
+═══════════════════════════════════════════════════════════════
+
+STEP 1: FIRST-TIME SETUP (Do this once)
+─────────────────────────────────────────
+
+1. Open PowerShell or Command Prompt
+2. Navigate to the project folder:
+   cd "c:\Users\RANJITH KUMAR V\OneDrive\New folder\aegis-harvest"
+
+3. Setup Backend (installs Python packages + trains ML model):
+   .\setup_backend.bat
+   
+   OR manually:
+   cd backend
+   pip install -r requirements.txt
+   cd ..
+   cd ml_model
+   python train_model.py
+   cd ..
+
+4. Setup Frontend (installs Node.js packages):
+   .\setup_frontend.bat
+   
+   OR manually:
+   cd frontend
+   npm install
+   cd ..
+
+
+STEP 2: RUN THE APP (Every time you want to use it)
+─────────────────────────────────────────────────────
+
+You need TWO terminal windows open:
+
+TERMINAL 1 - Backend Server:
+─────────────────────────────
+1. Open PowerShell/Command Prompt
+2. Navigate to project:
+   cd "c:\Users\RANJITH KUMAR V\OneDrive\New folder\aegis-harvest"
+3. Run backend:
+   .\run_backend.bat
+   
+   OR manually:
+   cd backend
+   python app.py
+   
+4. Wait for message: "Uvicorn running on http://0.0.0.0:8000"
+   (Keep this terminal open!)
+
+TERMINAL 2 - Frontend (Dashboard):
+───────────────────────────────────
+1. Open a NEW PowerShell/Command Prompt window
+2. Navigate to project:
+   cd "c:\Users\RANJITH KUMAR V\OneDrive\New folder\aegis-harvest"
+3. Run frontend:
+   .\run_frontend.bat
+   
+   OR manually:
+   cd frontend
+   npm start
+   
+4. Browser will automatically open to: http://localhost:3000
+   (If not, manually open http://localhost:3000 in your browser)
+
+
+STEP 3: USE THE APP
+─────────────────────
+
+Once both servers are running:
+
+1. You'll see the dashboard at http://localhost:3000
+2. Watch live telemetry updating every 2 seconds
+3. Click the "CHAOS BUTTON" to simulate cooling failure
+4. See predictions update in real-time
+5. Use "Smart Reroute Engine" to calculate best route
+
+
+TROUBLESHOOTING
+───────────────
+
+❌ Backend won't start?
+   → Make sure Python is installed: python --version
+   → Install dependencies: pip install -r requirements.txt
+   → Train model: cd ml_model && python train_model.py
+
+❌ Frontend won't start?
+   → Make sure Node.js is installed: node --version
+   → Install packages: cd frontend && npm install
+
+❌ "Port already in use" error?
+   → Close other apps using ports 8000 or 3000
+   → Or restart your computer
+
+❌ No data showing in dashboard?
+   → Make sure backend is running FIRST
+   → Check browser console (F12) for errors
+   → Verify both servers are running
+
+
+QUICK CHECKLIST
+───────────────
+□ Python installed (python --version)
+□ Node.js installed (node --version)
+□ Backend dependencies installed
+□ ML model trained
+□ Frontend packages installed
+□ Backend server running (Terminal 1)
+□ Frontend server running (Terminal 2)
+□ Browser open to http://localhost:3000
+
+
+═══════════════════════════════════════════════════════════════
