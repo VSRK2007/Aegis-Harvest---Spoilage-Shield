@@ -1,0 +1,116 @@
+.prediction-card {
+  min-height: 250px;
+}
+
+.prediction-card.status-critical {
+  border: 2px solid #f44336;
+  background: rgba(244, 67, 54, 0.1);
+}
+
+.prediction-card.status-warning {
+  border: 2px solid #ff9800;
+  background: rgba(255, 152, 0, 0.1);
+}
+
+.prediction-content {
+  text-align: center;
+}
+
+.days-left-display {
+  margin: 30px 0;
+}
+
+.days-left-value {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.prediction-card.status-critical .days-left-value {
+  background: linear-gradient(135deg, #f44336 0%, #f5576c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: pulse-text 1s infinite;
+}
+
+@keyframes pulse-text {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.days-left-label {
+  font-size: 1.1em;
+  opacity: 0.8;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.destination-info {
+  margin: 20px 0;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.destination-label {
+  font-size: 0.9em;
+  opacity: 0.8;
+  margin-bottom: 5px;
+}
+
+.destination-value {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #4caf50;
+}
+
+.alert-message,
+.warning-message {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.alert-message {
+  background: rgba(244, 67, 54, 0.2);
+  border: 1px solid #f44336;
+  animation: shake 0.5s infinite;
+}
+
+.warning-message {
+  background: rgba(255, 152, 0, 0.2);
+  border: 1px solid #ff9800;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}

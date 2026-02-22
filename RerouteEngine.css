@@ -1,0 +1,133 @@
+.reroute-engine {
+  max-height: 800px;
+  overflow-y: auto;
+}
+
+.reroute-engine.reroute-active {
+  border: 2px solid #ff9800;
+  background: rgba(255, 152, 0, 0.1);
+}
+
+.reroute-alert {
+  padding: 15px;
+  background: rgba(255, 152, 0, 0.2);
+  border: 1px solid #ff9800;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+  animation: pulse-alert 2s infinite;
+}
+
+@keyframes pulse-alert {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.reroute-form {
+  margin: 20px 0;
+}
+
+.reroute-result {
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.emergency-badge {
+  background: rgba(244, 67, 54, 0.2);
+  border: 2px solid #f44336;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: #f44336;
+  margin-bottom: 15px;
+  animation: pulse-badge 1s infinite;
+}
+
+@keyframes pulse-badge {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.reroute-result h3 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.recommendation {
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.recommendation.critical {
+  background: rgba(244, 67, 54, 0.2);
+  border: 2px solid #f44336;
+}
+
+.recommendation.warning {
+  background: rgba(255, 152, 0, 0.2);
+  border: 2px solid #ff9800;
+}
+
+.recommendation.normal {
+  background: rgba(76, 175, 80, 0.2);
+  border: 2px solid #4caf50;
+}
+
+.recommendation-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.best-center {
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+.best-center strong {
+  color: #4caf50;
+  font-size: 1.2em;
+}
+
+.survival-margins {
+  margin-top: 20px;
+}
+
+.survival-margins h4 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.margin-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 5px 0;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 5px;
+}
+
+.margin-item .positive {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.margin-item .negative {
+  color: #f44336;
+  font-weight: bold;
+}
